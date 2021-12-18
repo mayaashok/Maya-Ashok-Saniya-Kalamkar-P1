@@ -26,9 +26,9 @@
     <!-- External CSS shared across all pages for TOP Navigation styling -->
     <link rel="stylesheet" type="text/css" href="topnavbar.css"/> 
     <div class="topnav">
-        <a href='index.php'>Home</a>";
-        <a href='entertask-ui.php'>Enter-Tasks</a>";
-        <a class='active' href='viewtasks-ui.php'>View-Tasks</a>";
+        <a href='index.php'>Home</a>
+        <a href='entertask-ui.php'>Enter-Tasks</a>
+        <a class='active' href='viewtasks-ui.php'>View-Tasks</a>
     </div>
   </head>
 
