@@ -1,6 +1,12 @@
 # maya-ashok-saniya-kalamkar-P1
 
-<!-- These are the SQL statements for creating database and table called tasks1. You have to copy it into the SQL tab in localhost/phpmyadmin. Then highlight all the code and press go. -->
+<!-- These are the SQL statements for creating database (called planner db) and table (called tasks1). You have to copy it into the SQL tab in localhost/phpmyadmin. Then highlight all the code and press go. -->
+
+<!-- Used w3schools information on SQL Create DB and SQL Create Table to create plannerdb and tasks1 from lines 11-21. -->
+
+<!-- Got lines 23-26 from localhost/phpmyadmin user accounts tab by practicing adding a new user -->
+
+Used phpmyadmin and went to user accounts, add user account,
 
 CREATE DATABASE plannerdb;
 
