@@ -1,6 +1,6 @@
 # maya-ashok-saniya-kalamkar-P1
 
-/_ These are the SQL statements for creating database and a table for the tasks called task1. You should enter this into SQL in localhost/phpmyadmin and press the GO button to create the table. _/
+/_ COMMENTS - SQL STATEMENTS for creating database , tables and users _/
 
 CREATE DATABASE plannerdb;
 
