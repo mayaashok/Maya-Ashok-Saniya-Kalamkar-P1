@@ -6,8 +6,6 @@
 
 <!-- Got lines 23-26 from localhost/phpmyadmin user accounts tab by practicing adding a new user -->
 
-Used phpmyadmin and went to user accounts, add user account,
-
 CREATE DATABASE plannerdb;
 
 USE plannerdb;
