@@ -25,18 +25,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- External CSS shared across all pages for TOP Navigation styling -->
     <link rel="stylesheet" type="text/css" href="topnavbar.css"/> 
-    <div class="topnav">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <!-- <div class="topnav">
         <a href='index.php'>Home</a>
         <a href='entertask-ui.php'>Enter Tasks</a>
         <a class='active' href='viewtasks-ui.php'>View Tasks</a>
-    </div>
+    </div> -->
+    <div class="w3-topnavbar">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+          <a href="index.php" class="w3-bar-item w3-button"><i class="fa fa-home"></i> HOME</a>
+          <a href="entertask-ui.php" class="w3-bar-item w3-button"><i class="fa fa-calendar-plus-o"></i></i> ENTER TASKS</a>
+          <a href="viewtasks-ui.php" class="w3-bar-item w3-button active"><i class="fa fa-calendar"></i></i> VIEW TASKS</a>
+        </div>
   </head>
-
-<body class = "bgimg-view">
+<body>
+<header class = "bgimg-view">
 
 <!-- Form Inputs -->
 <section>
-  <br></br> <br></br> <br></br> <br></br> 
+  <br>
       <form action="viewtasks-ui.php" method="post">
          <div class="container">
          <h2 style="text-align:center;" >View Your Tasks:</h2>
@@ -161,6 +170,7 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]))
 ?>
 
 </section>
+</header>
 </body>
 </html>
 
@@ -191,7 +201,7 @@ input[type=text], input[type=password], input[type=date] {
 
 
 button {
-  background-color: #04AA6D;
+  background-color:#66abec;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -201,7 +211,7 @@ button {
 }
 
 button:hover {
-  opacity: 0.8;
+  background-color: #a7cdf1;
 }
 
 .container {
@@ -210,6 +220,7 @@ button:hover {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0px;
 }
 
 .center {
@@ -217,12 +228,18 @@ button:hover {
     margin-right: auto;
 }
 .bgimg-view{
-  background-position: center;
-  background-image: url("view.jpeg");
+  /* background-position: center;
+  background-image: url("viewPic.jpeg");
   min-height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: 100% 100%; */
+
+  background-position: center;
+    background-size: cover;
+    background-image: url("viewPic.jpeg");
+    min-height: 900px;
+    background-repeat: no-repeat;
 }
 .center-form{
 	width:400px;

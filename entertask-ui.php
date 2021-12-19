@@ -29,19 +29,28 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- External CSS shared across all pages for TOP Navigation styling -->
-    <link rel="stylesheet" type="text/css" href="topnavbar.css"/> 
-    <div class="topnav">
+    <link rel="stylesheet" type="text/css" href="topnavbar.css"/>
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <!-- <div class="topnav">
         <a href='index.php'>Home</a>
         <a class='active' href='entertask-ui.php'>Enter Tasks</a>
         <a href='viewtasks-ui.php'>View Tasks</a>
-    </div>
+    </div> -->
+    <div class="w3-topnavbar">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+          <a href="index.php" class="w3-bar-item w3-button"><i class="fa fa-home"></i> HOME</a>
+          <a href="entertask-ui.php" class="w3-bar-item w3-button active"><i class="fa fa-calendar-plus-o"></i></i> ENTER TASKS</a>
+          <a href="viewtasks-ui.php" class="w3-bar-item w3-button"><i class="fa fa-calendar"></i></i> VIEW TASKS</a>
+        </div>
   </head>
-
-<body class = "bgimg-enter">
+<body>
+<header class = "bgimg-enter">
 <!-- Form Inputs -->
 <!-- Form in which POST collects data inputed (Username, date, task) from input fields and includes submit button-->
 <section> 
-  <br></br> <br></br> <br></br> <br></br>
+  <br>
       <form action="entertask-ui.php" method="post">
          <div class="container">
               <h2 style="text-align:center;" > Enter Your Tasks:</h2>
@@ -61,12 +70,13 @@
               <span class="error">* </span>
               <input type="text" onclick="clearmsg()" placeholder="Enter task and click add" name="taskName" required value="<?php echo $taskName;?>" >
                   
-              <button type="input" name="submit">Add Task</button>
+              <button type="input" name="submit">ADD TASK</button>
             </div>
       </form>
 </section>
+<!-- </header>
 </body>
-</html>
+</html> -->
 
 <!-- POST Method Code to handle Form input-->
 <?php
@@ -101,16 +111,20 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]) && isset($_POST["task
     // Executes the query
     if ($conn->query($sql) === TRUE) {
       $message = $taskName . "  for " .  $taskDate . "  added successfully";
-      echo "<div class=\"container\"><h2 id=\"msgid\" style=\"color:green;text-align:center;background-color:white;\" >$message </h2>";
+      echo "<div class=\"container\" ><h2 id=\"msgid\" style=\"color:green;text-align:center;background-color:white;\">$message </h2>";
     } else {
       $message = "Error: " . $sql . "<br>" . $conn->error;
-      echo "<div class=\"container\"><h2 id=\"msgid\" style=\"color:red;text-align:center;background-color:white;\">$message </h2>";
+      echo "<div class=\"container\" ><h2 id=\"msgid\" style=\"color:red;text-align:center;background-color:white;\">$message </h2>";
     }
 
     // Close connection to database
     $conn->close();
   }
 ?>
+
+</header>
+</body>
+</html>
 
 <!-- Internal CSS Styling for the entertask page -->
 <style>
@@ -122,6 +136,7 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]) && isset($_POST["task
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0px;
 }
 
 .error {
@@ -151,8 +166,9 @@ input[type=text], input[type=password], input[type=date] {
 }
 
 button {
-  background-color: #04AA6D;
-  color: white;
+  background-color:#66abec;
+  font-family: "Raleway", sans-serif;
+  color: black;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -161,15 +177,21 @@ button {
 }
 
 button:hover {
-  opacity: 0.8;
+  background-color: #a7cdf1;
 }
 .bgimg-enter{
   background-position: center;
-  background-image: url("enter.jpeg");
-  min-height: 100%;
+    background-size: cover;
+    background-image: url("enterPic.jpeg");
+    min-height: 900px;
+    background-repeat: no-repeat;
+
+  /* background-position: center;
+  background-image: url("enterPic.jpeg");
+  min-height: 900px;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: cover; */
 }
 </style>
 
