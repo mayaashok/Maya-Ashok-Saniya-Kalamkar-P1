@@ -32,15 +32,16 @@
     <link rel="stylesheet" type="text/css" href="topnavbar.css"/> 
     <div class="topnav">
         <a href='index.php'>Home</a>
-        <a class='active' href='entertask-ui.php'>Enter-Tasks</a>
-        <a href='viewtasks-ui.php'>View-Tasks</a>
+        <a class='active' href='entertask-ui.php'>Enter Tasks</a>
+        <a href='viewtasks-ui.php'>View Tasks</a>
     </div>
   </head>
 
-<body>
+<body class = "bgimg-enter">
 <!-- Form Inputs -->
 <!-- Form in which POST collects data inputed (Username, date, task) from input fields and includes submit button-->
 <section> 
+  <br></br> <br></br> <br></br> <br></br>
       <form action="entertask-ui.php" method="post">
          <div class="container">
               <h2 style="text-align:center;" >My To Do List</h2>
@@ -100,10 +101,10 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]) && isset($_POST["task
     // Executes the query
     if ($conn->query($sql) === TRUE) {
       $message = $taskName . "  for " .  $taskDate . "  added successfully";
-      echo "<h2 id=\"msgid\" style=\"color:green;text-align:center;\" >$message </h2>";
+      echo "<div class=\"container\"><h2 id=\"msgid\" style=\"color:green;text-align:center;background-color:white;\" >$message </h2>";
     } else {
       $message = "Error: " . $sql . "<br>" . $conn->error;
-      echo "<h2 id=\"msgid\" style=\"color:red;text-align:center;\" >$message </h2>";
+      echo "<div class=\"container\"><h2 id=\"msgid\" style=\"color:red;text-align:center;background-color:white;\">$message </h2>";
     }
 
     // Close connection to database
@@ -130,8 +131,7 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]) && isset($_POST["task
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  /* background-image: url('enter.jpeg'); */
+  font-family: "Raleway", sans-serif;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -140,6 +140,7 @@ body {
 form {
   border: none;
   solid #f1f1f1;
+  margin: auto;
 }
 
 input[type=text], input[type=password], input[type=date] {
@@ -163,6 +164,12 @@ button {
 
 button:hover {
   opacity: 0.8;
+}
+.bgimg-enter{
+  background-position: center;
+  background-size: cover;
+  background-image: url("enter.jpeg");
+  min-height: 100%;
 }
 </style>
 
