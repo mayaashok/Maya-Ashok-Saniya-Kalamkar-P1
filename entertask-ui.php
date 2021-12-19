@@ -44,9 +44,9 @@
   <br></br> <br></br> <br></br> <br></br>
       <form action="entertask-ui.php" method="post">
          <div class="container">
-              <h2 style="text-align:center;" >My To Do List</h2>
+              <h2 style="text-align:center;" > Enter Your Tasks:</h2>
               <p class="error">* required field</p>
-              <label for="userName"><b>Enter your username</b></label>
+              <label for="userName"><b>Enter Your Username</b></label>
               <span class="error">* </span>
               <!--The input type is defined, the function clearmsg is called, and the information inputed is retained -->
               <input type="text" onclick="clearmsg()" placeholder="Enter your username" name="userName" required value="<?php echo $userName;?>">
@@ -59,7 +59,7 @@
               <br>
               <label for="taskName"><b>Enter a Task</b></label>
               <span class="error">* </span>
-              <input type="text" onclick="clearmsg()" placeholder="Enter Task and click Add" name="taskName" required value="<?php echo $taskName;?>" >
+              <input type="text" onclick="clearmsg()" placeholder="Enter task and click add" name="taskName" required value="<?php echo $taskName;?>" >
                   
               <button type="input" name="submit">Add Task</button>
             </div>
@@ -132,9 +132,7 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]) && isset($_POST["task
 
 body {
   font-family: "Raleway", sans-serif;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
+  text-align: center;
 }
 
 form {
@@ -167,9 +165,11 @@ button:hover {
 }
 .bgimg-enter{
   background-position: center;
-  background-size: cover;
   background-image: url("enter.jpeg");
   min-height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 </style>
 

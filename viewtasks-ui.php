@@ -170,9 +170,6 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]))
 .error {color: #FF0000;}
 body {
   font-family: "Raleway", sans-serif;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
   text-align: center;
 
 }
@@ -221,9 +218,11 @@ button:hover {
 }
 .bgimg-view{
   background-position: center;
-    background-size: cover;
-    background-image: url("view.jpeg");
-    min-height: 100%;
+  background-image: url("view.jpeg");
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 .center-form{
 	width:400px;
