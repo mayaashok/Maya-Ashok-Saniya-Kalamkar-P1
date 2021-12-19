@@ -6,4 +6,10 @@ $dBPassword = "!dbuser1!";
 $dBName     = "plannerDB";
 $port       = 3306;
 
+// $serverName = "localhost";
+// $dBUsername = "root";
+// $dBPassword = "";
+// $dBName     = "plannerDB";
+// $port       = 3306;
+
 ?>
