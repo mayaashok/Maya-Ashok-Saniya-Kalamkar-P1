@@ -27,20 +27,21 @@
     <link rel="stylesheet" type="text/css" href="topnavbar.css"/> 
     <div class="topnav">
         <a href='index.php'>Home</a>
-        <a href='entertask-ui.php'>Enter-Tasks</a>
-        <a class='active' href='viewtasks-ui.php'>View-Tasks</a>
+        <a href='entertask-ui.php'>Enter Tasks</a>
+        <a class='active' href='viewtasks-ui.php'>View Tasks</a>
     </div>
   </head>
 
-<body>
+<body class = "bgimg-view">
 
 <!-- Form Inputs -->
-<section> 
+<section>
+  <br></br> <br></br> <br></br> <br></br> 
       <form action="viewtasks-ui.php" method="post">
          <div class="container">
-         <h2 style="text-align:center;" >View tasks for the day</h2>
+         <h2 style="text-align:center;" >View Your Tasks:</h2>
          <p class="error">* required field</p>
-         <label for="userName"><b>Enter User Name</b></label>
+         <label for="userName"><b>Enter Username</b></label>
               <span class="error">* </span>
               <input type="text" onclick="clearmsg()" name="userName" required placeholder="Enter your username" value="<?php echo $userName;?>" >
                   
@@ -48,7 +49,7 @@
               <span class="error">* </span>
               <input type="date" onclick="clearmsg()" name="taskDate" required value="<?php echo $taskDate;?>" >
                   
-              <button type="input" name="submit">View Tasks for the day</button>
+              <button type="input" name="submit">View Tasks Your Tasks</button>
           </div>
 
 <!-- POST Method Code to handle Form input-->
@@ -145,7 +146,7 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]))
      }
      else if ($num_rows == 0 && !isset($_POST['delete'])) {
 
-      $message = "No Tasks for the username and date combination";
+      $message = "No tasks for the username and date combination";
      }
     $conn->close();
 /* End of Get tasks from the database and output in table */
@@ -155,7 +156,8 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]))
 </form>
 
 <?php
-  echo "<h2 id=\"msgid\" style=\"color:red;text-align:center;\" >$message </h2>";
+  echo "<div class=\"container\"> <h2 id=\"msgid\" style=\"color:red;text-align:center;background-color: white;\">$message </h2>";
+
 ?>
 
 </section>
@@ -167,16 +169,18 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]))
 
 .error {color: #FF0000;}
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  /* background-image: url('view.jpeg'); */
+  font-family: "Raleway", sans-serif;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
+  text-align: center;
 
 }
 form {
   border:none;
   solid #f1f1f1;
+  margin: auto;
+
 }
 
 input[type=text], input[type=password], input[type=date] {
@@ -214,6 +218,16 @@ button:hover {
 .center {
     margin-left: auto;
     margin-right: auto;
+}
+.bgimg-view{
+  background-position: center;
+    background-size: cover;
+    background-image: url("view.jpeg");
+    min-height: 100%;
+}
+.center-form{
+	width:400px;
+	margin: 0 auto;
 }
 
 </style>
