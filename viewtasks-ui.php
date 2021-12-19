@@ -58,7 +58,7 @@
               <span class="error">* </span>
               <input type="date" onclick="clearmsg()" name="taskDate" required value="<?php echo $taskDate;?>" >
                   
-              <button type="input" name="submit">View Tasks Your Tasks</button>
+              <button type="input" name="submit">View Your Tasks</button>
           </div>
 
 <!-- POST Method Code to handle Form input-->
