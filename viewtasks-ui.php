@@ -36,8 +36,8 @@
     <div class="w3-topnavbar">
         <div class="w3-bar w3-white w3-card" id="myNavbar">
           <a href="index.php" class="w3-bar-item w3-button"><i class="fa fa-home"></i> HOME</a>
-          <a href="entertask-ui.php" class="w3-bar-item w3-button"><i class="fa fa-calendar-plus-o"></i></i> ENTER TASKS</a>
-          <a href="viewtasks-ui.php" class="w3-bar-item w3-button active"><i class="fa fa-calendar"></i></i> VIEW TASKS</a>
+          <a href="entertask-ui.php" class="w3-bar-item w3-button"><i class="fa fa-calendar-plus-o"></i> ENTER TASKS</a>
+          <a href="viewtasks-ui.php" class="w3-bar-item w3-button active"><i class="fa fa-calendar"></i> VIEW TASKS</a>
         </div>
   </head>
 <body>
@@ -48,17 +48,17 @@
   <br>
       <form action="viewtasks-ui.php" method="post">
          <div class="container">
-         <h2 style="text-align:center;" >View Your Tasks:</h2>
+         <h2 style="text-align:center; color:white;" ><b>View Your Tasks:</b></h2>
          <p class="error">* required field</p>
-         <label for="userName"><b>Enter Username</b></label>
+         <label for="userName" style="color:white; font-size:20px;"><b>Enter Your Username:</b></label>
               <span class="error">* </span>
-              <input type="text" onclick="clearmsg()" name="userName" required placeholder="Enter your username" value="<?php echo $userName;?>" >
+              <input type="text" onclick="clearmsg()" name="userName" required placeholder="Enter Your Username" value="<?php echo $userName;?>" >
                   
-              <label for="taskDate"><b>Choose a Date</b></label>
+              <label for="taskDate" style="color:white; font-size:20px;"><b>Pick A Date:</b></label>
               <span class="error">* </span>
               <input type="date" onclick="clearmsg()" name="taskDate" required value="<?php echo $taskDate;?>" >
                   
-              <button type="input" name="submit">View Tasks Your Tasks</button>
+              <button type="input" name="submit" style="font-size:15px;"><b>VIEW TASKS</b></button>
           </div>
 
 <!-- POST Method Code to handle Form input-->
@@ -95,7 +95,7 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]))
         
         // Execute the query
         if ($conn->query($sql) === TRUE) {
-          $message = "Task(s) deleted successfully";
+          $message = "Completed Task(s) Successfully";
         } else {
           $message = "Error deleting record: " . $conn->error;
         }
@@ -105,7 +105,7 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]))
       else {
       // If delete is pressed and no task is selected
         if (isset($_POST['delete'])) {
-            $message = "select tasks(s) from checkbox to delete tasks";
+            $message = "Select Task(s) From Checkbox To Delete Tasks";
         }
       }
   /* End of delete processing code */
@@ -136,7 +136,7 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]))
         echo "<table class=\"center\" style=\"background-color: white;\" border=1px color=solid black>";
         echo "<tr>";
             echo "<th> </th>";
-            echo "<th> User:". $userName . " - Tasks for the day:" . $taskDate . "</th>";
+            echo "<th> User: ". $userName . "'s Tasks For " . $taskDate . "</th>";
         echo "</tr>";
         while($rowData=$result->fetch_assoc()) {
           $taskID = $rowData['tasksID'];
@@ -150,12 +150,12 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]))
           echo "</tr>";
         }
         echo "</table>";
-        echo "<button type=\"input\" name='delete'>Delete Selected Tasks </button>";
+        echo "<button type=\"input\" name='delete' style=\"font-size:15px;\"><b>COMPLETED SELECTED TASKS</b></button>";
         echo "</div>";
      }
      else if ($num_rows == 0 && !isset($_POST['delete'])) {
 
-      $message = "No tasks for the username and date combination";
+      $message = "No Tasks For The Username And Date Combination";
      }
     $conn->close();
 /* End of Get tasks from the database and output in table */
@@ -165,7 +165,7 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]))
 </form>
 
 <?php
-  echo "<div class=\"container\"> <h2 id=\"msgid\" style=\"color:red;text-align:center;background-color: white;\">$message </h2>";
+  echo "<div class=\"container\"> <h2 id=\"msgid\" style=\"color:#319490;text-align:center;font-size:22px;\">$message </h2>";
 
 ?>
 
@@ -177,7 +177,9 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]))
 <!-- Internal CSS Styling for the viewtask page -->
 <style>
 
-.error {color: #FF0000;}
+.error {
+  color: #DF152F;
+}
 body {
   font-family: "Raleway", sans-serif;
   text-align: center;
@@ -191,32 +193,35 @@ form {
 }
 
 input[type=text], input[type=password], input[type=date] {
+  font-family: "Raleway", sans-serif;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 0px solid #fff;
   box-sizing: border-box;
 }
 
 
 button {
-  background-color:#66abec;
-  color: white;
+  background-color: white;
+  font-family: "Raleway", sans-serif;
+  color: black;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 70%;
 }
 
 button:hover {
-  background-color: #a7cdf1;
+  background-color: #d1eafe;
 }
 
 .container {
   padding: 16px;
-  background-color: white;
+  /* background-color: white; */
+  background-color: #b6c6d3;
   width: 50%;
   margin-left: auto;
   margin-right: auto;

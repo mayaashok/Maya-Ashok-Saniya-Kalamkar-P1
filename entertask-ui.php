@@ -33,16 +33,11 @@
     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <!-- <div class="topnav">
-        <a href='index.php'>Home</a>
-        <a class='active' href='entertask-ui.php'>Enter Tasks</a>
-        <a href='viewtasks-ui.php'>View Tasks</a>
-    </div> -->
     <div class="w3-topnavbar">
         <div class="w3-bar w3-white w3-card" id="myNavbar">
           <a href="index.php" class="w3-bar-item w3-button"><i class="fa fa-home"></i> HOME</a>
-          <a href="entertask-ui.php" class="w3-bar-item w3-button active"><i class="fa fa-calendar-plus-o"></i></i> ENTER TASKS</a>
-          <a href="viewtasks-ui.php" class="w3-bar-item w3-button"><i class="fa fa-calendar"></i></i> VIEW TASKS</a>
+          <a href="entertask-ui.php" class="w3-bar-item w3-button active"><i class="fa fa-calendar-plus-o"></i> ENTER TASKS</a>
+          <a href="viewtasks-ui.php" class="w3-bar-item w3-button"><i class="fa fa-calendar"></i> VIEW TASKS</a>
         </div>
   </head>
 <body>
@@ -53,24 +48,24 @@
   <br>
       <form action="entertask-ui.php" method="post">
          <div class="container">
-              <h2 style="text-align:center;" > Enter Your Tasks:</h2>
+              <h2 style="text-align:center; color:white;" ><b>Enter Your Tasks:</b></h2>
               <p class="error">* required field</p>
-              <label for="userName"><b>Enter Your Username</b></label>
+              <label for="userName" style="color:white; font-size:20px;"><b>Enter Your Username:</b></label>
               <span class="error">* </span>
               <!--The input type is defined, the function clearmsg is called, and the information inputed is retained -->
-              <input type="text" onclick="clearmsg()" placeholder="Enter your username" name="userName" required value="<?php echo $userName;?>">
+              <input type="text" onclick="clearmsg()" placeholder="Enter Your Username" name="userName" required value="<?php echo $userName;?>">
 
               <br>
-              <label for="taskDate"><b>Choose a Date</b></label>
+              <label for="taskDate" style="color:white; font-size:20px;"><b>Pick A Date:</b></label>
               <span class="error">* </span>
               <input type="date" onclick="clearmsg()" name="taskDate" required value="<?php echo $taskDate;?>">
               
               <br>
-              <label for="taskName"><b>Enter a Task</b></label>
+              <label for="taskName" style="color:white; font-size:20px;"><b>Enter A Task:</b></label>
               <span class="error">* </span>
-              <input type="text" onclick="clearmsg()" placeholder="Enter task and click add" name="taskName" required value="<?php echo $taskName;?>" >
+              <input type="text" onclick="clearmsg()" placeholder="Enter A Task" name="taskName" required value="<?php echo $taskName;?>" >
                   
-              <button type="input" name="submit">ADD TASK</button>
+              <button type="input" name="submit" style="font-size:15px;"><b>ADD TASK</b></button>
             </div>
       </form>
 </section>
@@ -110,11 +105,11 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]) && isset($_POST["task
     
     // Executes the query
     if ($conn->query($sql) === TRUE) {
-      $message = $taskName . "  for " .  $taskDate . "  added successfully";
-      echo "<div class=\"container\" ><h2 id=\"msgid\" style=\"color:green;text-align:center;background-color:white;\">$message </h2>";
+      $message = $userName . "'s task: " . $taskName . " added successfully on " .  $taskDate;
+      echo "<div class=\"container\" ><h2 id=\"msgid\" style=\"color:#319490;text-align:center;font-size:22px;\"><b>$message</b></h2>";
     } else {
       $message = "Error: " . $sql . "<br>" . $conn->error;
-      echo "<div class=\"container\" ><h2 id=\"msgid\" style=\"color:red;text-align:center;background-color:white;\">$message </h2>";
+      echo "<div class=\"container\" ><h2 id=\"msgid\" style=\"color:#DF152F;text-align:center;font-size:22px;\">$message </h2>";
     }
 
     // Close connection to database
@@ -132,7 +127,9 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]) && isset($_POST["task
 .container {
   top: 10px;
   padding: 16px;
-  background-color: white;
+  /* background-color: #154c79; */
+  background-color: #b6c6d3;
+  /* background-color: #8ab1c8; */
   width: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -140,7 +137,7 @@ if (isset($_POST["userName"]) && isset($_POST["taskDate"]) && isset($_POST["task
 }
 
 .error {
-  color: #FF0000;
+  color: #DF152F;
   margin-left: auto;
   margin-right: auto;
 }
@@ -157,27 +154,28 @@ form {
 }
 
 input[type=text], input[type=password], input[type=date] {
+  font-family: "Raleway", sans-serif;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 0px solid #fff;
   box-sizing: border-box;
 }
 
 button {
-  background-color:#66abec;
+  background-color: white;
   font-family: "Raleway", sans-serif;
   color: black;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 70%;
 }
 
 button:hover {
-  background-color: #a7cdf1;
+  background-color: #d1eafe;
 }
 .bgimg-enter{
   background-position: center;

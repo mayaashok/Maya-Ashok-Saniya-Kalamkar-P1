@@ -72,6 +72,7 @@ html {
 
 .w3-topnavbar a.active {
   background-color: #66abec;
+  /* background-color: #154c79; */
   color: #000;
 }
 

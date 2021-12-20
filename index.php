@@ -13,8 +13,8 @@
   <div class="w3-topnavbar">
         <div class="w3-bar w3-white w3-card" id="myNavbar">
           <a href="index.php" class="w3-bar-item w3-button active"><i class="fa fa-home"></i> HOME</a>
-          <a href="entertask-ui.php" class="w3-bar-item w3-button"><i class="fa fa-calendar-plus-o"></i></i> ENTER TASKS</a>
-          <a href="viewtasks-ui.php" class="w3-bar-item w3-button"><i class="fa fa-calendar"></i></i> VIEW TASKS</a>
+          <a href="entertask-ui.php" class="w3-bar-item w3-button"><i class="fa fa-calendar-plus-o"></i> ENTER TASKS</a>
+          <a href="viewtasks-ui.php" class="w3-bar-item w3-button"><i class="fa fa-calendar"></i> VIEW TASKS</a>
         </div>
 
   </head>
@@ -61,7 +61,7 @@
   .bgimg-1 {
     background-position: center;
     background-size: cover;
-    background-image: url("indexImg.jpeg");
+    background-image: url("homePic.jpeg");
     min-height: 900px;
   }
   .startButton {
@@ -88,6 +88,6 @@
     opacity: 1;
   }
   .startButton:hover {
-    background-color: #a7cdf1;
+    background-color: #d1eafe;
   }
 </style>
