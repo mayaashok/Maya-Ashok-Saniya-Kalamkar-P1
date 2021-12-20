@@ -5,11 +5,6 @@
     <link rel="stylesheet" type="text/css" href="topnavbar.css"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <div class="topnav">
-        <a class='active' href='index.php'>Home</a>
-        <a href='entertask-ui.php'>Enter Tasks</a>
-        <a href='viewtasks-ui.php'>View Tasks</a>
-  </div>  -->
   <div class="w3-topnavbar">
         <div class="w3-bar w3-white w3-card" id="myNavbar">
           <a href="index.php" class="w3-bar-item w3-button active"><i class="fa fa-home"></i> HOME</a>
