@@ -6,6 +6,8 @@
 
 <!-- Got lines 23-26 from localhost/phpmyadmin user accounts tab by practicing adding a new user -->
 
+<!-- Note: http://localhost/phpmyadmin/ can also be used to create database, create table, create users, and grant priviliges 
+
 CREATE DATABASE plannerdb;
 
 USE plannerdb;
@@ -19,9 +21,8 @@ PRIMARY KEY (tasksID)
 );
 
 CREATE USER dbuser1@localhost identified by '!dbuser1!';
-
+Use plannerdb;
 grant all privileges on plannerdb to dbuser1@localhost;
-
 flush privileges;
+GRANT ALL PRIVILEGES ON *.* TO dbuser1@localhost REQUIRE NONE WITH GRANT OPTION;
 
-GRANT ALL PRIVILEGES ON _._ TO dbuser1@localhost REQUIRE NONE WITH GRANT OPTION;
