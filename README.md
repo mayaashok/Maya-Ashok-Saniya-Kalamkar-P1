@@ -8,6 +8,8 @@
 
 <!-- Note: http://localhost/phpmyadmin/ can also be used to create database, create table, create users, and grant priviliges  -->
 
+<!-- If you get an error that says "INSERT command denied to user 'dbuser1'@'localhost' for table 'tasks1'", this means that the database creation scripts for granting the user privilege to the database didn't work. You can do this manually by going to http://localhost/phpmyadmin/, clicking user accounts tab, clicking the check mark next to dbuser1, clicking "Edit privileges", then clicking the "Check all" checkbox next to "Global privileges", and scrolling down and clicking the "Go" button. -->
+
 CREATE DATABASE plannerdb;
 
 USE plannerdb;
