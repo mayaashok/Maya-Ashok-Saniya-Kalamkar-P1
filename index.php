@@ -34,16 +34,16 @@
         <p class="center">
           <a href="entertask-ui.php" class="startButton">START</a>
         </p>
-      </div>
-    </header>
-    <div class="w3-container" style="padding: 16px 16px">
-      <h3 class="center"style="font-size: 28px">Why use Planner101?</h3>
+      <!-- </div>
+    </header> -->
+    <div class="w3-container" style="padding: 30px 30px">
+      <h3 class="center"style="font-size: 28px">Why Use Planner 101?</h3>
       <div class="w3-row-padding w3-center" style="margin-top: 44px">
         <div class="w3-quarter">
           <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
           <p class="w3-large">Responsive</p>
           <p>
-            With Planner101, you can enjoy a responsive planner, as you can add and delete assignment
+            With Planner 101, you can enjoy a responsive planner, as you can add and delete assignment
             and due dates with no hassle. 
           </p>
         </div>
@@ -51,7 +51,7 @@
           <i class="fa fa-user w3-margin-bottom w3-jumbo"></i>
           <p class="w3-large">Personalized</p>
           <p>
-            With Planner101, enjoy a personalized experience styled to you with your own unique username.
+            With Planner 101, enjoy a personalized experience styled to you with your own unique username.
           </p>
         </div>
         <div class="w3-quarter">
@@ -67,7 +67,12 @@
           <p> Enjoy our efficient planner as you take make the most of your own time.</p>
         </div>
       </div>
+      <br>
+    <br>
+    <br>
     </div>
+    </div>
+    </header>
 
 
 
@@ -96,7 +101,7 @@
     background-position: center;
     background-size: cover;
     background-image: url("homePic.jpeg");
-    min-height: 900px;
+    min-height: 1100px;
   }
   .startButton {
     border: none;
@@ -114,7 +119,7 @@
     -ms-user-select: none;
     user-select: none;
     white-space: normal;
-    width: 100%;
+    width: 50%;
     color: #000;
     background-color: #fff;
     padding: 12px 24px;

@@ -180,7 +180,7 @@ button:hover {
 .bgimg-enter{
   background-position: center;
     background-size: cover;
-    background-image: url("enterPic.jpeg");
+    background-image: url("enterImage.jpeg");
     min-height: 900px;
     background-repeat: no-repeat;
 

@@ -242,7 +242,7 @@ button:hover {
 
   background-position: center;
     background-size: cover;
-    background-image: url("viewPic.jpeg");
+    background-image: url("viewImage.jpeg");
     min-height: 900px;
     background-repeat: no-repeat;
 }
