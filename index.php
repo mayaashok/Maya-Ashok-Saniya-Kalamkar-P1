@@ -37,37 +37,38 @@
       </div>
     </header>
     <div class="w3-container" style="padding: 16px 16px">
-      <h3 class="center"style="font-size: 28px">Why use Planner 101?</h3>
+      <h3 class="center"style="font-size: 28px">Why use Planner101?</h3>
       <div class="w3-row-padding w3-center" style="margin-top: 44px">
         <div class="w3-quarter">
           <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-          <p class= "font-size: 20px">Responsive</p>
+          <p class="w3-large">Responsive</p>
           <p>
-            With Planner 101, you can enjoy a responsive planner, as you can add and delete assignment
+            With Planner101, you can enjoy a responsive planner, as you can add and delete assignment
             and due dates with no hassle. 
           </p>
         </div>
         <div class="w3-quarter">
           <i class="fa fa-user w3-margin-bottom w3-jumbo"></i>
-          <p style = "font-size: 20px">Personalized</p>
+          <p class="w3-large">Personalized</p>
           <p>
-            With Planner 101, enjoy a personalized experience styled to you with your own unique username.
+            With Planner101, enjoy a personalized experience styled to you with your own unique username.
           </p>
         </div>
         <div class="w3-quarter">
           <i class="fa fa-list-ul w3-margin-bottom w3-jumbo"></i>
-          <p class="font-size: 20px">Organized</p>
+          <p class="w3-large">Organized</p>
           <p>
             Take control of your life with an easy to our easy-to-use planner. 
           </p>
         </div>
         <div class="w3-quarter">
           <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-          <p class= "font-size: 20px">Efficient</p>
+          <p class="w3-large">Efficient</p>
           <p> Enjoy our efficient planner as you take make the most of your own time.</p>
         </div>
       </div>
     </div>
+
 
 
  
@@ -124,6 +125,9 @@
     background-color: #d1eafe;
   }
 
-.w3-quarter{float:left;width:100%;width:24.99999%}
+.w3-quarter{float:left;width:100%}
+.w3-quarter{width:24.99999%}
+.w3-row-padding:after,.w3-row-padding:before,
+
 .w3-border-0{border:0!important}.w3-border{border:1px solid #ccc!important}
 </style>
